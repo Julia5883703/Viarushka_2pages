@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url(../fonts/RobotoSlab-Light.ttf);/*300*/
+    src: url(../fonts/Oswald-Regular.ttf);/*regular*/
+}
+
+body {
+    display: grid;
+    grid-template-rows: 15vh 70vh 15vh;
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../images/main-boy.svg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right;
+}
+
+.header {
+    grid-row: 1/2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2vh 5vw 1vh 5vw;
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+}
+
+.header__logo-title {
+    padding-left: 1vw;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    font-size: 1.5em;
+    text-decoration: none;
+    color: black;
+}
+
+.header__container-basket {
+    height: 38px;
+    width: 115px;
+    border-radius: 100px;
+    background-color: #5222D0;
+    text-align: center;
+}
+
+.header__link-basket {
+    text-decoration: none;
+    color: white;
+    font-size: 13px;
+    font-family: 'Oswald',
+    sans-serif;
+    font-weight: bold;
+    line-height: 38px;
+}
+
+.main {
+    grid-row: 2/3;
+}
+
+.main__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 45vw;
+    height: 70vh;
+    margin-left: 8vw;   
+}
+
+.main__container-title {
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    font-size: 5vw;
+    text-transform: uppercase;
+    margin-bottom: 4vh;
+    background-color: #ffffff99;
+}
+
+.main__container-content {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 1em;
+    margin-bottom: 4vh;
+    background-color: #ffffff99;
+}
+
+.main__container-buy {
+    height: 84px;
+    width: 270px;
+    border-radius: 100px;
+    background-color: #5222D0;
+    text-align: center;
+}
+
+.main__link-buy {
+    text-decoration: none;
+    color: white;
+    font-size: 35px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    line-height: 84px;
+}
+
+.footer {
+    grid-row: 3/4;
+    margin-left: 10vw;
+    align-self: center;
+}
+
+.footer__link {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 1em;
+    letter-spacing: 0.1em;
+}
+
+@media (max-width: 600px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        background-image: none;
+    }
+
+    .header {
+        margin-bottom: 2vh;
+    }
+
+    .main__container {
+        height: 100%;
+        width: 90%;
+        margin: 0 auto 5vh auto;
+        align-items: center;
+        text-align: center;
+    }
+
+    .main__container-title {
+        font-size: 8vw;
+    }
+
+    .main__container-buy {
+        width: 60vw;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+}
